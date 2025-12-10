@@ -7,7 +7,8 @@
 html, body {
   background-color: #FFF1EC;
   scroll-behavior: smooth;
-  font-family: 'Poppins', 'Ariel', sans-serif;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -17,119 +18,491 @@ a {
 
 #header {
   width: 100%;
-  height: 100vh;
-  background-color: blue;
-  background-image: url('../img/mig.jpg');
-  background-position: center;
+  max-height: 99vh;
+  background-image: url('../img/baggrund.png');
   background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
 }
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+
+.header-text h1 {
+  color: #FFF1EC;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header-text h2 {
+  flex: 1;
+  color: #FFF1EC;
+  text-align: left;
+  font-size: 48px;
+   line-height: 1.2;
+}
+
+
+.header-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.header-text .primary-btn {
+  width: fit-content;
+  align-self: flex-start;
+  margin: 0;
+}
+
+/* BILAG 1 Sørg for at header-text er en flex-kolonne */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;   /* h2 forbliver venstrejusteret */
+}
+
+/* Kun knappen centreret */
+.header-text .primary-btn {
+  align-self: center; /* knappen centrerer sig horisontalt BILAG 1 SLUT*/
+}
+
+.header-text h2 span {
+    display: block;
+}
+
+
+
 
 .container {
   max-width: 1200px;
   margin: auto;
+  padding: 0 8px;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 32px;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 nav .logo {
-    font-family: 'Reenie Beanie', 'Ariel', sans-serif;
+    font-family: 'Pompiere', 'Ariel', sans-serif;
     font-size: 30px;
     color: #FFF1EC;
 }
 
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 60px;
-}
 
-.header-content h2 {
-    font-size: 60px;
-    color: #FFF1EC;
-    font-weight: 40px;
-    font-family: "reenie beanie", 'Ariel', sans-serif;
-}
-
-.header-content p {
+.primary-btn {
+    background-color: #FFDCCC;
+    font-family: "Pompiere", 'Ariel', sans-serif;
+    color: #1C2F4C;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
     font-size: 20px;
-    color: #FFF1EC;
-    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0;
 }
 
-.primary.btn {
-    background-color: #BA857F;
-    font-family: "Poppins", 'Ariel', sans-serif;
+.primary-btn:hover {
+    background-color: #1C2F4C;
+    color: #FFDCCC
+}
+
+.second-btn {
+    background-color: #1C2F4C;
+    font-family: "Pompiere", 'Ariel', sans-serif;
     color: #FFF1EC;
     padding: 12px 24px;
     border: none;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.primary.btn:hover {
-    background-color: #1C2F4C;
+.second-btn:hover {
+    background-color: #6F3B2F;
 }
 
+.primary-btn, .second-btn {
+   padding: 14px 32px;
+   font-size: 22px;
+   border-radius: 8px;
+   font-weight: bold;
+}
+
+.menu-btn {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    padding: 12px 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#FFF1EC;
+    display: none;
+}
+
+.menu-btn.open i {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
 
 h1 {
-  text-align: left;
   color: #FFF1EC;
-  font-family: 'Reenie Beanie', 'Ariel', sans-serif;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
   font-size: 55px;
 }
 
 h2 {
   color: #1C2F4C;
-  font-family: 'Reenie Beanie', 'Ariel', sans-serif;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
   font-size: 40px;
 }
 
 h3 {
   color: #1C2F4C;
-  font-family: 'Poppins', 'Ariel', sans-serif;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
   font-size: 25px;
   font-weight: bold;
 }
 
 h4 {
   color: #1C2F4C;
-  font-family: 'Poppins', 'Ariel', sans-serif;
-  font-size: 20px;
-  font-style: italic;
-}
-
-h5 {
-  color: #1C2F4C;
-  font-family: 'Poppins', 'Ariel', sans-serif;
-  font-size: 10px;
-  text-decoration: underline;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  
 }
 
 p {
   color: #1C2F4C;
-  font-family: 'Poppins', 'Ariel', sans-serif;
-  font-size: 18px;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 24px;
   line-height: 1.6;
 }
 
-@media only screen and (max-width: 500px){
+#services{
+ display: flex;
+ margin-top: 120px;
+ gap: 30px;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.service {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service p {
+  color: aqua;
+}
+
+.service img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#about {
+  display: flex;              /* SE BILAG 1 gør sektionen til en flex container */
+  align-items: center;        /* centrerer indholdet vertikalt */
+  justify-content: space-between; /* sørger for at tekst og billede står i hver sin side */
+  gap: 40px;                  /* afstand mellem tekst og billede */
+    margin-top: 100px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  color: #1C2F4C;
+}
+
+.about-content {
+  flex: 1;                    /* teksten fylder venstre side */
+  text-align: left;           /* venstrejusteret tekst */
+}
+
+#about img {
+  max-width: 400px;   /* sætter en maksimal bredde */
+  width: 100%;        /* tilpasser sig containeren */
+  height: auto;       /* bevarer proportioner */
+  margin: 0 auto;     /* centrerer billedet horisontalt SE BILAG 1 SLUT */
+  display: block;
+}
+
+
+.about-text {
+  display: flex;
+  flex-direction: column; /* lægger h2, p og knap under hinanden */
+  text-align: left;       /* h2 og p forbliver venstrejusteret */
+  gap: 16px;
+}
+
+#about p {
+  margin-bottom: 16px;
+}
+
+.about-text .second-btn {
+  align-self: center;     /* kun knappen centreret horisontalt */
+}
+
+
+
+
+
+.talk-to-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#FFF1EC;
+  height: 500px;
+  gap: 16px;
+  margin-top: 120px;
+  padding: 0 16px;
+  background-image: url('../img/baggrund.png');
+  background-size: cover;
+  background-position: center;
+  max-height: 400px;
+}
+
+.talk-to-us-content h2 {
+  font-size: 40px;
+  color: #fff1ec;
+  margin-top: 16px;
+}
+
+.talk-to-us-content p {
+  max-width: 500px;
+  text-align: center;
+  color: #fff1ec;
+  margin-top: 16px;
+}
+
+
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+footer p {
+  padding: 16px 0;
+  color: #1C2F4C;
+}
+
+
+/*Kontaktside*/
+#contact-header {
+  min-height: 300px;
+  background-image: url(../img/baggrund.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#contact-us {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px auto;
+  gap: 60px;
+}
+
+#contact-us h3 {
+  align-items: center;
+  color: pink;
+}
+
+form {
+  flex-basis: 50%;
+}
+
+.adresses {
+  flex-basis: 50%;
+}
+
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.inputsWrapper input {
+  padding: 12px 16px;
+  border: 1px solid #1C2F4C;
+  outline: none; 
+}
+
+.detailsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 60px;
+}
+
+.detail {
+  display: flex;
+  gap: 10px;
+}
+
+
+.followWrapper {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.followWrapper img {
+  width: 40px;
+  height: 40px;
+}
+
+.sociallink {
+  display: flex;
+  gap: 60px;
+  list-style-type: none;
+  margin-top: 60px;
+}
+
+
+
+
+@media only screen and (max-width: 800px){
+
+
+  #header {
+    min-height: 300px;
+  }
+
+  .header-text h2 {
+      font-size: 25px;
+      text-align: center;
+
+  }
+
+
+    .header-content {
+      font-size: 20px;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .header-image img {
+      max-width: 300px;
+  }
+  
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    padding: 16px;
+  }
+
+  nav ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  background-color: #1C2F4C;
+  width: 100%;
+  height: 100%;
+  align-items: end;
+  padding-top: 80px;
+  margin-right: -900px;
+  
+
+  }
+  nav ul.nav-active {
+    margin-right: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav li {
+    border-bottom: 1px solid #FFF1EC;
+    width: 100%;
+    padding: 8px 20px;
+    text-align: left;
+  }
+
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 0;
+    gap: 16px;
+  }
+
+  #about img {
+    margin: 20px;
+  }
+
+  #about h2 {
+    text-align: center;
+  }
+
+  #about p {
+      text-align: center;
+  }
+
+
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 0;
+    gap: 16px;}
+
+
+  #contact-us {
+    flex-direction: column;
+  }
+
+  #inputsWrapper {
+    margin-left: 0;
+  }
+
+  #contact-us h3 {
+  text-align: center;
+  }
+
+
+  .followWrapper img {
+    margin-left: 100px;
+  }
+
 
 }
-<--!// 11.07 i video bjerg//!-->
+
