@@ -11,6 +11,26 @@ html, body {
   overflow-x: hidden;
 }
 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+  background-color: #6F3B2F;
+  color: #FFDCCC;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#scrollToTopBtn.show {
+  opacity: 1;
+}
+
+
 a {
   text-decoration: none;
   color: #FFF1EC;
@@ -18,7 +38,7 @@ a {
 
 #header {
   width: 100%;
-  max-height: 99vh;
+  max-height: 100vh;
   background-image: url('../img/baggrund.png');
   background-size: cover;
   background-position: center;
@@ -126,8 +146,8 @@ nav .logo {
 }
 
 .primary-btn:hover {
-    background-color: #1C2F4C;
-    color: #FFDCCC
+    background-color: #FFC7AD;
+    color: #1C2F4C
 }
 
 .second-btn {
@@ -140,6 +160,7 @@ nav .logo {
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  margin: 0;
 }
 
 .second-btn:hover {
@@ -162,7 +183,8 @@ nav .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    color:#FFF1EC;
+    background-color: #FFF1EC;
+    color: #1C2F4C;
     display: none;
 }
 
@@ -186,7 +208,7 @@ h2 {
 h3 {
   color: #1C2F4C;
   font-family: 'Pompiere', 'Ariel', sans-serif;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -196,6 +218,12 @@ h4 {
   font-size: 16px;
   font-weight: lighter;
   
+}
+
+h5 {
+color: #FFF1EC;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 55px;
 }
 
 p {
@@ -235,17 +263,28 @@ p {
   align-items: center;        /* centrerer indholdet vertikalt */
   justify-content: space-between; /* sørger for at tekst og billede står i hver sin side */
   gap: 40px;                  /* afstand mellem tekst og billede */
-    margin-top: 100px;
+  margin-top: 100px;
+  text-align: left;
 }
 
 .about-content h2 {
   font-size: 32px;
   color: #1C2F4C;
+  margin-bottom: 5%;
 }
 
 .about-content {
   flex: 1;                    /* teksten fylder venstre side */
   text-align: left;           /* venstrejusteret tekst */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* centrerer indholdet vertikalt i kolonnen */
+}
+
+.about-content .second-btn {
+  display: block;
+  margin: 16px auto 0; /* centrerer knappen horisontalt */
+  width: fit-content;
 }
 
 #about img {
@@ -336,12 +375,18 @@ footer p {
   display: flex;
   justify-content: space-between;
   margin: 80px auto;
-  gap: 60px;
+  gap: 0px;
 }
 
 #contact-us h3 {
   align-items: center;
-  color: pink;
+  color: #1C2F4C;
+  margin-left: 200px;
+  
+}
+
+#contact-us p {
+  margin-left: 100px;
 }
 
 form {
@@ -350,7 +395,11 @@ form {
 
 .adresses {
   flex-basis: 50%;
+  margin-left: 10px;
 }
+
+
+
 
 .inputsWrapper {
   display: flex;
@@ -360,10 +409,12 @@ form {
   margin-left: 60px;
 }
 
-.inputsWrapper input {
+.inputsWrapper input, textarea {
   padding: 12px 16px;
   border: 1px solid #1C2F4C;
   outline: none; 
+  font-family: "pompiere", Arial, sans-serif;
+  font-size: 20px;
 }
 
 .detailsWrapper {
@@ -371,22 +422,35 @@ form {
   flex-direction: column;
   gap: 60px;
   margin-top: 60px;
+  margin-left: 0px;
+  
 }
 
 .detail {
   display: flex;
   gap: 10px;
+  margin-left: 0px;
 }
+
+
 
 
 .followWrapper {
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 .followWrapper img {
   width: 40px;
   height: 40px;
+  margin-left: 250px;
+  margin-right: -230px;
+  margin-top: -60px;
+}
+
+.followWrapper img:hover {
+  width: 45px;
+  height: 45px;
 }
 
 .sociallink {
@@ -397,17 +461,66 @@ form {
 }
 
 
+.header-content-portfolio img {
+width: 200px;
+height: auto;
+}
+
+/*Portfolio*/
+#portfolio-header {
+  min-height: 300px;
+  background-image: url(../img/baggrund.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.solid-divider {
+  border-top: 2px solid #6F3B2F;
+  margin: 2%;
+}
+
+#about-portfolio {
+  display: flex;              /* SE BILAG 1 gør sektionen til en flex container */
+  align-items: center;        /* centrerer indholdet vertikalt */
+  justify-content: space-between; /* sørger for at tekst og billede står i hver sin side */
+  gap: 40px;                  /* afstand mellem tekst og billede */
+  margin-top: 100px;
+}
+
+.about-portfolio-content h2 {
+  font-size: 32px;
+  color: #1C2F4C;
+}
+
+.about-portfolio-content {
+  flex: 1;                    /* teksten fylder venstre side */
+  text-align: left;           /* venstrejusteret tekst */
+}
+
+
+.about-portfolio-text {
+  display: flex;
+  flex-direction: column; /* lægger h2, p og knap under hinanden */
+  text-align: left;       /* h2 og p forbliver venstrejusteret */
+  gap: 16px;
+}
+
+#about-portfolio p {
+  margin-bottom: 16px;
+}
+
 
 
 @media only screen and (max-width: 800px){
 
 
   #header {
-    min-height: 300px;
+    min-height: 500px;
+    max-height: 800px;
   }
 
   .header-text h2 {
-      font-size: 25px;
+      font-size: 200%;
       text-align: center;
 
   }
@@ -426,6 +539,7 @@ form {
 
   .menu-btn {
     display: block;
+
   }
 
   nav {
@@ -486,22 +600,67 @@ form {
     gap: 16px;}
 
 
+
+
+/*kontakt side*/
+
   #contact-us {
     flex-direction: column;
   }
 
-  #inputsWrapper {
-    margin-left: 0;
+   .inputsWrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 70%;
+    gap: 15px;
   }
 
   #contact-us h3 {
-  text-align: center;
+    text-align: center;
+    margin-left: 0;
   }
 
+  #contact-us p {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .adresses {
+    margin-left: 0;
+  }
+
+  .detailsWrapper {
+    margin-left: 0;
+    text-align: center;
+  }
 
   .followWrapper img {
-    margin-left: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
   }
+
+  .followWrapper {
+    text-align: center;
+  }
+
+    .sociallink {
+    justify-content: center;
+  }
+
+  .detail {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 60px;
+  }
+
+ .primary-btn, .second-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  width: 50%;
+  margin: 0 auto;
+}
 
 
 }

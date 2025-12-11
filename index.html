@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Portfolio - Channe Lykke Krog</title>
+    <title>Forside - Channe Lykke Krog</title>
 </head>
 
 <body>
@@ -20,10 +20,10 @@
 <section id="header">
   <div class="container">
     <nav>
-      <div class="logo"><h1>Channe Lykke Krog</h1></div>
+      <div class="logo"><h5>Channe Lykke Krog</h5></div>
       <ul class="nav-links">
         <li><a href="/index.html">Forside</a></li>
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
         <li><a href="#">Om mig</a></li>
         <li><a href="/kontakt.html">Kontakt mig</a></li>
       </ul>
@@ -37,25 +37,18 @@
         <h2>Multimediedesigner studerende med passion for 
           <span>grafisk design og mad</span>
         </h2>
+         <button class="primary-btn header-btn">Se mine projekter her</button>
       </div>
 
       <div class="header-image">
         <img src="img/migcrop.jpg" alt="Billede af Channe Lykke Krog">
       </div>
       
-      <button class="primary-btn header-btn">Se mine projekter her</button>
+
     </div>
 
   </div>
 </section>
-
-<!-- <div class="header-content">
-        <div class="header-text">
-        <h2>Multimediedesigner studerende med passion for <br>grafisk design og mad</br></h2>
-        <br></br>
-        <button class="primary-btn">Se mine projekter her</button>
-             </div>-->
-
 
 
 <section id="about" class="container">
@@ -76,8 +69,9 @@
         <p>
             Læs mere om min rejse, mine erfaringer og mine mål for fremtiden nedenfor 👇
         </p>
-        <button class="second-btn">Læs mere om mig</button>
+            <div><button class="second-btn">Læs mere om mig</button></div>
     </div>
+
 
     <div class="about-img">
         <img src="img/medkamera.png" alt="Billede af Channe Lykke Krog">
@@ -98,7 +92,7 @@
     </section>
 
     <footer>
-        <h4>&copy; Channe Lykke Krog. All right reserved.</h4>
+        <h4>&copy; Channe Lykke Krog. All rights reserved.</h4>
     </footer>
 
 
@@ -121,6 +115,31 @@ menuBtn.addEventListener('click', () => {
     }
 });
     </script>
+
+    <!--Scroll to top knap-->
+    <button id="scrollToTopBtn">↑</button>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+     window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+      } else {
+      scrollBtn.classList.remove("show");
+     }
+      });
+
+     scrollBtn.addEventListener("click", () => {
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+     });
+     });
+     });
+    </script>
+
 
 </body>
 </html>
