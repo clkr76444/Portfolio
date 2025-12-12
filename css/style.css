@@ -39,7 +39,7 @@ a {
 #header {
   width: 100%;
   max-height: 100vh;
-  background-image: url('../img/baggrund.png');
+  background-image: url('../img/baggrund.webp');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -325,7 +325,7 @@ p {
   gap: 16px;
   margin-top: 120px;
   padding: 0 16px;
-  background-image: url('../img/baggrund.png');
+  background-image: url('../img/baggrund.webp');
   background-size: cover;
   background-position: center;
   max-height: 400px;
@@ -366,7 +366,7 @@ footer p {
 /*Kontaktside*/
 #contact-header {
   min-height: 300px;
-  background-image: url(../img/baggrund.png);
+  background-image: url(../img/baggrund.webp);
   background-size: cover;
   background-position: center;
 }
@@ -420,8 +420,8 @@ form {
 .detailsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  margin-top: 60px;
+  gap: 40px;
+  margin-top: 100px;
   margin-left: 0px;
   
 }
@@ -449,8 +449,8 @@ form {
 }
 
 .followWrapper img:hover {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
 }
 
 .sociallink {
@@ -469,7 +469,7 @@ height: auto;
 /*Portfolio*/
 #portfolio-header {
   min-height: 300px;
-  background-image: url(../img/baggrund.png);
+  background-image: url(../img/baggrund.webp);
   background-size: cover;
   background-position: center;
 }
@@ -508,6 +508,14 @@ height: auto;
 #about-portfolio p {
   margin-bottom: 16px;
 }
+
+#arbejde img {
+  max-width: 100%;   /* billedet fylder hele containerens bredde */
+  height: auto;      /* bevarer proportioner */
+  margin: 0 auto;    /* centrerer billedet */
+  display: block;
+}
+
 
 
 
@@ -627,10 +635,12 @@ height: auto;
 
   .adresses {
     margin-left: 0;
+    margin-top: 20px;
   }
 
   .detailsWrapper {
     margin-left: 0;
+    margin-top: 30px;
     text-align: center;
   }
 
@@ -652,7 +662,7 @@ height: auto;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-left: 60px;
+    margin-left: 0px;
   }
 
  .primary-btn, .second-btn {
@@ -662,6 +672,24 @@ height: auto;
   margin: 0 auto;
 }
 
+/*portfolio side*/
+  #about-portfolio {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+  }
+
+  #about-portfolio img {
+    max-width: 100%;
+    margin: 1em auto;
+  }
+
+  .about-portfolio-text {
+    text-align: center;
+  }
+
+  #arbejde img {
+    margin: 20px auto;
+  }
 
 }
-
