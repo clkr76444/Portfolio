@@ -509,12 +509,16 @@ height: auto;
   margin-bottom: 16px;
 }
 
-#arbejde img {
+.arbejde img {
   max-width: 100%;   /* billedet fylder hele containerens bredde */
   height: auto;      /* bevarer proportioner */
   margin: 0 auto;    /* centrerer billedet */
   display: block;
+  flex-direction: row;
 }
+
+
+
 
 
 
@@ -690,6 +694,8 @@ height: auto;
 
   #arbejde img {
     margin: 20px auto;
+    flex-direction: column;
   }
+
 
 }
