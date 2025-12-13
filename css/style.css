@@ -36,7 +36,7 @@ a {
   color: #FFF1EC;
 }
 
-#header {
+#portfolio-header {
   width: 100%;
   max-height: 100vh;
   background-image: url('../img/baggrund.webp');
@@ -233,38 +233,17 @@ p {
   line-height: 1.6;
 }
 
-#services{
- display: flex;
- margin-top: 120px;
- gap: 30px;
- justify-content: center;
- flex-wrap: wrap;
-}
 
-.service {
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
-.service p {
-  color: aqua;
-}
 
-.service img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-#about {
-  display: flex;              /* SE BILAG 1 gør sektionen til en flex container */
+.about-section {
+  display: flex;              /* gør sektionen til en flex container */
   align-items: center;        /* centrerer indholdet vertikalt */
   justify-content: space-between; /* sørger for at tekst og billede står i hver sin side */
   gap: 40px;                  /* afstand mellem tekst og billede */
-  margin-top: 100px;
+  margin-top: 60px;
   text-align: left;
+  flex-wrap: wrap;
 }
 
 .about-content h2 {
@@ -287,11 +266,11 @@ p {
   width: fit-content;
 }
 
-#about img {
+
+.about-section img {
   max-width: 400px;   /* sætter en maksimal bredde */
   width: 100%;        /* tilpasser sig containeren */
   height: auto;       /* bevarer proportioner */
-  margin: 0 auto;     /* centrerer billedet horisontalt SE BILAG 1 SLUT */
   display: block;
 }
 
@@ -303,7 +282,7 @@ p {
   gap: 16px;
 }
 
-#about p {
+.about-section p {
   margin-bottom: 16px;
 }
 
@@ -474,50 +453,88 @@ height: auto;
   background-position: center;
 }
 
+.portfolio {
+  margin: 5%
+}
+
 .solid-divider {
   border-top: 2px solid #6F3B2F;
   margin: 2%;
 }
 
-#about-portfolio {
-  display: flex;              /* SE BILAG 1 gør sektionen til en flex container */
-  align-items: center;        /* centrerer indholdet vertikalt */
-  justify-content: space-between; /* sørger for at tekst og billede står i hver sin side */
-  gap: 40px;                  /* afstand mellem tekst og billede */
-  margin-top: 100px;
-}
-
-.about-portfolio-content h2 {
-  font-size: 32px;
-  color: #1C2F4C;
-}
-
-.about-portfolio-content {
-  flex: 1;                    /* teksten fylder venstre side */
-  text-align: left;           /* venstrejusteret tekst */
-}
-
-
-.about-portfolio-text {
+.aboutportfolio {
   display: flex;
-  flex-direction: column; /* lægger h2, p og knap under hinanden */
-  text-align: left;       /* h2 og p forbliver venstrejusteret */
-  gap: 16px;
-}
-
-#about-portfolio p {
-  margin-bottom: 16px;
-}
-
-.arbejde img {
-  max-width: 100%;   /* billedet fylder hele containerens bredde */
-  height: auto;      /* bevarer proportioner */
-  margin: 0 auto;    /* centrerer billedet */
-  display: block;
   flex-direction: row;
+  padding-top: 2%;
 }
 
+.aboutportfolio img {
+  max-height: 50%;
+  max-width: auto;
+}
 
+.aboutfotos {
+  display: flex;
+  margin-top: 2%;
+}
+
+.aboutfotos img {
+  margin-top: 0;
+  max-width: 50%;
+  max-height: auto;
+}
+
+.aboutcontentcreation {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2%;
+}
+
+.aboutcontentcreation img {
+  max-width: 40%;
+  max-height: auto;
+  margin-left: 10%;
+}
+
+.aboutanimation {
+  margin-top: 2%;
+  display: flex;
+}
+
+.aboutanimation iframe {
+  margin-left: 10%;
+}
+
+.aboutvideo {
+  margin-top: 2%;
+  display: flex;
+}
+
+.aboutvideo video {
+  margin-left: 10%;
+}
+
+.aboutprototyping {
+  display: flex;
+  margin-top: 2%;
+}
+
+.aboutprototyping img {
+  margin-left: 10%;
+  max-width: 15%;
+  max-height: auto;
+}
+
+.aboutanalyse {
+  display: flex;
+  margin-top: 2%;
+}
+
+.aboutanalyse img {
+  margin-top: 0;
+  max-width: 50%;
+  max-height: auto;
+}
 
 
 
@@ -526,7 +543,7 @@ height: auto;
 @media only screen and (max-width: 800px){
 
 
-  #header {
+  #portfolio-header {
     min-height: 500px;
     max-height: 800px;
   }
@@ -584,22 +601,22 @@ height: auto;
     text-align: left;
   }
 
-  #about {
+  .about-section {
     flex-direction: column;
     text-align: center;
     padding: 32px 0;
     gap: 16px;
   }
 
-  #about img {
+  .about-section img {
     margin: 20px;
   }
 
-  #about h2 {
+  .about-section h2 {
     text-align: center;
   }
 
-  #about p {
+  .about-section p {
       text-align: center;
   }
 
@@ -674,28 +691,99 @@ height: auto;
   font-size: 18px;
   width: 50%;
   margin: 0 auto;
+ }
+
+/*portfolio*/
+
+.aboutportfolio {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
 }
 
-/*portfolio side*/
-  #about-portfolio {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5em;
-  }
+.aboutportfolio img {
+  max-height: 25%;
+  max-width: auto;
+}
 
-  #about-portfolio img {
-    max-width: 100%;
-    margin: 1em auto;
-  }
+.aboutfotos {
+  display: flex;
+  flex-direction: column;
+}
+.aboutfotos img {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  max-width: 40%;
+  max-height: auto;
+ justify-content: center;
+ }
 
-  .about-portfolio-text {
-    text-align: center;
-  }
+.aboutcontentcreation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+}
 
-  #arbejde img {
-    margin: 20px auto;
-    flex-direction: column;
-  }
+.aboutcontentcreation img {
+  max-width: 80%;
+  max-height: auto;
+  margin-left: 10%;
+  margin-top: 10%;
+}
 
+.aboutanimation {
+  display: flex;
+  flex-direction: column;
+}
+.aboutanimation iframe {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  max-width: 90%;
+  max-height: auto;
+}
 
+.aboutvideo {
+  display: flex;
+  flex-direction: column;
+}
+.aboutvideo iframe {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  max-width: 90%;
+  max-height: auto;
+}
+
+.aboutprototyping {
+  display: flex;
+  flex-direction: column;
+}
+.aboutprototyping img {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  max-width: 40%;
+  max-height: auto;
+ justify-content: center;
+ }
+
+ .aboutanalyse {
+  display: flex;
+  flex-direction: column;
+}
+.aboutanalyse img {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  max-width: 40%;
+  max-height: auto;
+ justify-content: center;
+ }
 }
