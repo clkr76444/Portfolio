@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <title>Forside - Channe Lykke Krog</title>
+</head>
+
+<body>
+
+
+  <!-- Header -->
+  <header id="contact-header">
+    <div class="container">
+      <nav>
+        <div class="logo"><h5>Channe Lykke Krog</h5></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="ommig.html">Om mig</a></li>
+          <li><a href="kontakt.html">Kontakt mig</a></li>
+        </ul>
+        <button class="menu-btn" aria-label="Menu"><i class="fa fa-bars"></i></button>
+      </nav>
+      <div class="header-text">
+        <h1>Portfolio</h1>
+      </div>
+    </div>
+  </header>
+
+
+
+<section class="ommig" class="container">
+    <h2>Hej! 👋 </h2>
+    <div class="aboutchanne">
+        <p>For mig har mad og måltider altid været et samlingspunkt I min familie. Det har været et tidspunkt, hvor man mødes, deler historier og skaber nærvær. 
+            <br>Det inspirerede mig til at starte mit arbejdsliv i restaurationsbranchen, hvor jeg har arbejdet siden jeg var 16 år.
+            <br> Med 9 års erfaring har jeg fået en dyb forståelse af at sætte gæsten først, og jeg har fået skabt mig selv et kæmpe servicegen.
+            <br>Derudover så tror jeg på at de små detaljer har en stor betydning i det store billede, så jeg går gerne en ekstra mil for at gøre mit allerbedste.
+            <br>I forhold til min tekniske interesse, har den altid været hos mig. 
+            <br>Siden jeg var barn har jeg brugt tid foran computeren, hvor jeg eksperimenterede med billedredigering, collager og digitale værktøjer - ofte i timevis, drevet af nysgerrighed og kreativitet, hvilket stadig gælder for mig den dag idag.
+        <br> Alle disse kompetencer ønsker jeg at tage med ind i mit fremtidige arbejdsliv, hvilket kan ses på mit engagement, mit servicegen og min drivkraft.</p>
+        <img src="../img/lille mig.png" alt="Billede af mig som lille foran computeren">
+    </div>
+</section>
+
+<section class="ommig" class="container">
+    <div class="aboutarbejde">
+        <p>Jeg ønsker at kombinere min erfaring med service fra restaurationsbranchen med mine tekniske og kreative kompetencer.
+            Det kunne f.eks. hjælpe restauranter med at synliggøre deres unikke kvaliteter gennem content creation, hjemmesider og fotografering.
+            Jeg ved, hvad der betyder noget for gæsten, og jeg forstår samtidig, hvordan branchen fungerer bag kulisserne.
+            Det gør mig i stand til at skabe markedsføring, der både er autentisk og effektiv.
+            Jeg er nu i gang med multimediedesignuddannelsen - en drøm jeg har haft siden mine teenageår.
+            Mit mål er at udvikle min viden inden for design, kommunikation, kreativitet og teknologi, og på længere sigt bygge videre med en specialisering. </p>
+        <img src="../img/medkamera.webp" alt="Illustration lavet i figma af Channe">
+    </div>
+</section>
+
+<section class="ommig" class="container">
+    <div class="aboutarbejde">
+        <p>Når jeg ikke arbejder eller studerer, finder man mig i køkkenet med min forlovede, som er kok. 
+            Udover at lave mad, så elsker jeg at gå ture i naturen eller nyde gode måltider ude.
+            Og nogen gange, er det lørdagsro med et glas vin på sofaen og netflix på skærmen, som giver mig ny energi.
+            <br>
+            <br>
+            <br>Tak for at læse med ❤️</p>
+        <img src="../img/michaelogjeg.png" alt="Illustration lavet i figma af Channe">
+    </div>
+</section>
+    
+    <section id="talk-to-us">
+        <div class="talk-to-us-content">
+            <br>
+            <h2>Skal vi samarbejde?</h2>
+            <p>
+                Har du spørgsmål eller vil du gerne i kontakt med mig?
+                <br>Tryk på knappen og udfyld formularen, så vender jeg tilbage til dig hurtigst muligt!
+            </p>
+            <button class="primary-btn">Kontakt mig her</button>
+        </div>
+    </section>
+
+    <footer>
+        <h4>&copy; Channe Lykke Krog. All rights reserved.</h4>
+    </footer>
+
+
+    <script>
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+    menuBtn.classList.toggle('open');
+
+    // Skift ikon fra burger til kryds
+    const icon = menuBtn.querySelector('i');
+    if(menuBtn.classList.contains('open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+    </script>
+
+    <!--Scroll to top knap-->
+    <button id="scrollToTopBtn">↑</button>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+     window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+      } else {
+      scrollBtn.classList.remove("show");
+     }
+      });
+
+     scrollBtn.addEventListener("click", () => {
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+     });
+     });
+     });
+    </script>
+
+
+</body>
+</html>

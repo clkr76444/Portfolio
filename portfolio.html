@@ -24,10 +24,10 @@
       <nav>
         <div class="logo"><h5>Channe Lykke Krog</h5></div>
         <ul class="nav-links">
-          <li><a href="/index.html">Forside</a></li>
-          <li><a href="/portfolio.html">Portfolio</a></li>
-          <li><a href="#">Om mig</a></li>
-          <li><a href="/kontakt.html">Kontakt mig</a></li>
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="ommig.html">Om mig</a></li>
+          <li><a href="kontakt.html">Kontakt mig</a></li>
         </ul>
         <button class="menu-btn" aria-label="Menu"><i class="fa fa-bars"></i></button>
       </nav>
@@ -36,9 +36,6 @@
       </div>
     </div>
   </header>
-
-
-
 
 
 
@@ -60,18 +57,73 @@
     <hr class="solid-divider">
 </section>
 
-        <section class="portfolio" class="container">
+
+<section class="portfolio" class="container">
     <h2>Fotos</h2>
     <div class="aboutfotos">
         <p>
-            Til dette projekt har jeg primært lavet en prototype i Figma. Vi fik til arbejde at løse et vagtplanlægningssystem for Word Festival.
-            Her arbejdede jeg ud fra en givet styletile fra virksomheden, hvor vi løste deres primære problemstillinger: Indtjekning, vagtønsker og forbedret kommunikation med virksomhedens frivillige. 
-            <br>Det eneste som jeg ikke lavede i prototyping var en fejlside, når man står på forsiden og trykker på "Brug for hjælp?"
-
+            Jeg elsker at tage billeder af mad. I galleriet kan du se et par af mine fotografier, som jeg har taget her i december måned. 
+            Ønsker du at få taget billeder til dit nye menukort eller af din nye menu? Så kan du kontakte mig ved at trykke på knappen her!
+           <br> <button class="primary-btn">Kontakt mig</button>
         </p>
-        <img src="../img/persona.webp" alt="Content Creation remake">
+
+        <!--BILAG 2-->
+        <div class="carousel">
+        <button class="carousel-btn prev">❮</button>
+
+     <div class="carousel-window">
+         <div class="carousel-track">
+         <img src="../img/bord14.jpg" alt="">
+         <img src="../img/bullabaise.jpg" alt="">
+         <img src="../img/tatar.jpg" alt="">
+         <img src="../img/frikadeller.jpg" alt="">
+         <img src="../img/klejner.jpg" alt="">
+         <img src="../img/greens.jpg" alt="">
+         <img src="../img/bord18.jpg" alt="">
+         <img src="../img/tatar.jpg" alt="">
+         <img src="../img/bord16.jpg" alt="">
+         <img src="../img/vino.jpg" alt="">
+        </div>
+     </div>
+     <button class="carousel-btn next">❯</button>
     </div>
-    </section>
+
+        <script>
+            const track = document.querySelector('.carousel-track');
+            const images = document.querySelectorAll('.carousel-track img');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+
+            let index = 0;
+            const totalImages = images.length;
+            const imagesPerPage = 2;  // Viser 2 billeder ad gangen
+
+            // Funktion til at opdatere carousellen
+            function updateCarousel() {
+            const width = document.querySelector('.carousel-window').clientWidth;
+            track.style.transform = `translateX(-${index * (width / imagesPerPage)}px)`;  // Skift 2 billeder ad gangen
+            }
+
+            // Next knap funktion
+            nextBtn.addEventListener('click', () => {
+            // Hvis vi er på den sidste side, så gå tilbage til den første
+             index = (index + 1) % Math.ceil(totalImages / imagesPerPage);  // Beregn antallet af sider
+             updateCarousel();
+            });
+
+            // Prev knap funktion
+            prevBtn.addEventListener('click', () => {
+            // Hvis vi er på den første side, så gå til den sidste
+            index = (index - 1 + Math.ceil(totalImages / imagesPerPage)) % Math.ceil(totalImages / imagesPerPage);  // Beregn antallet af sider
+            updateCarousel();
+            });
+
+         // Opdater carousellen, hvis vinduet ændres
+         window.addEventListener('resize', updateCarousel);
+        </script>
+        <!--BILAG 2 SLUT -->
+    </div>
+ </section>
 
     <section>
     <hr class="solid-divider">
@@ -121,10 +173,9 @@
             Jeg har haft fokus på timing, effekter og lyd samt arbejdet en del med keyframes. 
             <br> Mit fokus har været at skabe en "short video", som kan vise et teaser af mit arbejde.
         </p>
-              <!--https://www.w3schools.com/html/html5_video.asp-->
+                 <!--https://www.w3schools.com/html/html5_video.asp-->
                  <video width="250" height="auto" controls>
                      <source src="../img/video.mp4" type="video/mp4">
-                     Din browser understøtter ikke video-tagget.
                  </video>
     </div>
     </section>
@@ -139,10 +190,10 @@
         <p>
             Til dette projekt har jeg primært lavet en prototype i Figma. Vi fik til arbejde at løse et vagtplanlægningssystem for Word Festival.
             Her arbejdede jeg ud fra en givet styletile fra virksomheden, hvor vi løste deres primære problemstillinger: Indtjekning, vagtønsker og forbedret kommunikation med virksomhedens frivillige. 
-            <br>Det eneste som jeg ikke lavede i prototyping var en fejlside, når man står på forsiden og trykker på "Brug for hjælp?"
+            <br>Det eneste som jeg ikke lavede i prototyping var en fejlside, når man står på forsiden og trykker på <br>"Brug for hjælp?"
 
         </p>
-        <img src="../img/wordfestival.webp" alt="Content Creation remake">
+        <img src="../img/wordfestival.webp" alt="Word festival prototype">
     </div>
     </section>
 
@@ -154,12 +205,14 @@
     <h2>Målgruppeanalyse</h2>
     <div class="aboutanalyse">
         <p>
-            Til dette projekt har jeg primært lavet en prototype i Figma. Vi fik til arbejde at løse et vagtplanlægningssystem for Word Festival.
-            Her arbejdede jeg ud fra en givet styletile fra virksomheden, hvor vi løste deres primære problemstillinger: Indtjekning, vagtønsker og forbedret kommunikation med virksomhedens frivillige. 
-            <br>Det eneste som jeg ikke lavede i prototyping var en fejlside, når man står på forsiden og trykker på "Brug for hjælp?"
-
+            I forbindelse med at skulle skabe designbyck.dk, har jeg fået til opgave at vælge en målgruppe. 
+            Jeg valgte at sætte mit fokus på restaurationsbranchen, fordi jeg ønsker at hjælpe restauranter med at vise sig fra deres bedste side og tiltrække potentielle nye gæster.
+            En af de måder, som jeg har valgt at gøre det på, er ved at lave en målgruppe analyse, som det første i mit projekt. 
+            Her snakkede jeg med 5 personer, som arbejder i restaurationsbranchen, hvor jeg interviewede dem for at skabe indblik i hvordan jeg kunne målrette min portfolio bedst muligt til dem.
+            <br>Ud fra dette data, har jeg udarbejdet en persona, som har til formål at opsætte problemstillinger, motivationer og forhindringer, som jeg skal være opmærksom på i forbindelse med mit projekt.
+            Dette gør at jeg har arbejdet målrettet med mit projekt for at ramme en målgruppe.
         </p>
-        <img src="../img/persona.webp" alt="Content Creation remake">
+        <img src="../img/persona.webp" alt="Persona lavet af Søren - restaurations ejer">
     </div>
     </section>
 
@@ -175,7 +228,7 @@
             <h2>Skal vi samarbejde?</h2>
             <p>
                 Har du spørgsmål eller vil du gerne i kontakt med mig?
-                <br>Udfyld formularen nedenfor, så vender jeg tilbage til dig hurtigst muligt!
+                <br>Tryk på knappen og udfyld formularen, så vender jeg tilbage til dig hurtigst muligt!
             </p>
             <button class="primary-btn">Kontakt mig her</button>
         </div>

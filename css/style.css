@@ -1,3 +1,5 @@
+/*Globale settings*/
+
 *{
     margin: 0;
     padding: 0;
@@ -35,75 +37,6 @@ a {
   text-decoration: none;
   color: #FFF1EC;
 }
-
-#portfolio-header {
-  width: 100%;
-  max-height: 100vh;
-  background-image: url('../img/baggrund.webp');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-}
-
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 40px 0;
-  flex-wrap: wrap;
-}
-
-.header-text h1 {
-  color: #FFF1EC;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.header-text h2 {
-  flex: 1;
-  color: #FFF1EC;
-  text-align: left;
-  font-size: 48px;
-   line-height: 1.2;
-}
-
-
-.header-image img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-
-.header-text .primary-btn {
-  width: fit-content;
-  align-self: flex-start;
-  margin: 0;
-}
-
-/* BILAG 1 Sørg for at header-text er en flex-kolonne */
-.header-text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  text-align: left;   /* h2 forbliver venstrejusteret */
-}
-
-/* Kun knappen centreret */
-.header-text .primary-btn {
-  align-self: center; /* knappen centrerer sig horisontalt BILAG 1 SLUT*/
-}
-
-.header-text h2 span {
-    display: block;
-}
-
-
-
 
 .container {
   max-width: 1200px;
@@ -233,7 +166,124 @@ p {
   line-height: 1.6;
 }
 
+/*Skal vi samarbejde?- sektion*/
 
+.talk-to-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#FFF1EC;
+  height: 500px;
+  gap: 16px;
+  margin-top: 120px;
+  padding: 0 16px;
+  background-image: url('../img/baggrund.webp');
+  background-size: cover;
+  background-position: center;
+  max-height: 400px;
+}
+
+.talk-to-us-content h2 {
+  font-size: 40px;
+  color: #fff1ec;
+  margin-top: 16px;
+}
+
+.talk-to-us-content p {
+  max-width: 500px;
+  text-align: center;
+  color: #fff1ec;
+  margin-top: 16px;
+}
+
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+footer p {
+  padding: 16px 0;
+  color: #1C2F4C;
+}
+
+
+/*INDEX-side*/
+
+#portfolio-header {
+  width: 100%;
+  max-height: 100vh;
+  background-image: url('../img/baggrund.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+
+.header-text h1 {
+  color: #FFF1EC;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header-text h2 {
+  flex: 1;
+  color: #FFF1EC;
+  text-align: left;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+
+.header-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.header-text .primary-btn {
+  width: fit-content;
+  align-self: flex-start;
+  margin: 0;
+}
+
+
+/* BILAG 1 Sørg for at header-text er en flex-kolonne */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;   /* h2 forbliver venstrejusteret */
+}
+
+/* Kun knappen centreret */
+.header-text .primary-btn {
+  align-self: center; /* knappen centrerer sig horisontalt BILAG 1 SLUT*/
+}
+
+.header-text h2 span {
+    display: block;
+}
 
 
 .about-section {
@@ -253,6 +303,7 @@ p {
 }
 
 .about-content {
+  margin-top: 5%;
   flex: 1;                    /* teksten fylder venstre side */
   text-align: left;           /* venstrejusteret tekst */
   display: flex;
@@ -293,55 +344,6 @@ p {
 
 
 
-
-.talk-to-us-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color:#FFF1EC;
-  height: 500px;
-  gap: 16px;
-  margin-top: 120px;
-  padding: 0 16px;
-  background-image: url('../img/baggrund.webp');
-  background-size: cover;
-  background-position: center;
-  max-height: 400px;
-}
-
-.talk-to-us-content h2 {
-  font-size: 40px;
-  color: #fff1ec;
-  margin-top: 16px;
-}
-
-.talk-to-us-content p {
-  max-width: 500px;
-  text-align: center;
-  color: #fff1ec;
-  margin-top: 16px;
-}
-
-
-
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-
-footer p {
-  padding: 16px 0;
-  color: #1C2F4C;
-}
-
-
 /*Kontaktside*/
 #contact-header {
   min-height: 300px;
@@ -350,6 +352,7 @@ footer p {
   background-position: center;
 }
 
+/*Begge kolonner*/
 #contact-us {
   display: flex;
   justify-content: space-between;
@@ -368,17 +371,10 @@ footer p {
   margin-left: 100px;
 }
 
+/*Kontaktform*/
 form {
   flex-basis: 50%;
 }
-
-.adresses {
-  flex-basis: 50%;
-  margin-left: 10px;
-}
-
-
-
 
 .inputsWrapper {
   display: flex;
@@ -394,6 +390,13 @@ form {
   outline: none; 
   font-family: "pompiere", Arial, sans-serif;
   font-size: 20px;
+}
+
+/*Mine oplysninger*/
+
+.adresses {
+  flex-basis: 50%;
+  margin-left: 10px;
 }
 
 .detailsWrapper {
@@ -412,8 +415,7 @@ form {
 }
 
 
-
-
+/*Sociale medier*/
 .followWrapper {
   margin-top: 30px;
   margin-left: 0px;
@@ -440,10 +442,6 @@ form {
 }
 
 
-.header-content-portfolio img {
-width: 200px;
-height: auto;
-}
 
 /*Portfolio*/
 #portfolio-header {
@@ -457,11 +455,18 @@ height: auto;
   margin: 5%
 }
 
+.header-content-portfolio img {
+width: 200px;
+height: auto;
+}
+
 .solid-divider {
   border-top: 2px solid #6F3B2F;
   margin: 2%;
 }
 
+
+/*Sektion 1*/
 .aboutportfolio {
   display: flex;
   flex-direction: row;
@@ -471,11 +476,17 @@ height: auto;
 .aboutportfolio img {
   max-height: 50%;
   max-width: auto;
+  margin-right: 2%;
 }
 
+/*Sektion 2*/
 .aboutfotos {
   display: flex;
   margin-top: 2%;
+}
+
+.aboutfotos p {
+  margin-right: 10%;
 }
 
 .aboutfotos img {
@@ -484,6 +495,53 @@ height: auto;
   max-height: auto;
 }
 
+.aboutfotos.primary-btn {
+  justify-items: center;
+}
+
+/*BILAG 2*/
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;   /* begrænser bredden på store skærme */
+  margin: auto;
+  margin-right: 4%;
+}
+
+.carousel-window {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Image karussel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/*BILAG 2 SLUT*/
+
+/*Sektion 3*/
 .aboutcontentcreation {
   display: flex;
   flex-direction: row;
@@ -494,8 +552,11 @@ height: auto;
   max-width: 40%;
   max-height: auto;
   margin-left: 10%;
+  margin-right: 4%;
 }
 
+
+/*Sektion 4*/
 .aboutanimation {
   margin-top: 2%;
   display: flex;
@@ -503,8 +564,14 @@ height: auto;
 
 .aboutanimation iframe {
   margin-left: 10%;
+  margin-right: 4%;
 }
 
+.aboutanimation p {
+  margin-right: 10%;
+}
+
+/*Sektion 5*/
 .aboutvideo {
   margin-top: 2%;
   display: flex;
@@ -512,8 +579,15 @@ height: auto;
 
 .aboutvideo video {
   margin-left: 10%;
+  margin-right: 4%;
 }
 
+.aboutvideo p {
+  margin-right: 10%;
+  align-items: center;
+}
+
+/*Sektion 6*/
 .aboutprototyping {
   display: flex;
   margin-top: 2%;
@@ -521,10 +595,16 @@ height: auto;
 
 .aboutprototyping img {
   margin-left: 10%;
-  max-width: 15%;
+  margin-right: 4%;
+  max-width: 20%;
   max-height: auto;
 }
 
+.aboutprototyping p {
+  margin-right: 10%
+}
+
+/*Sektion 7*/
 .aboutanalyse {
   display: flex;
   margin-top: 2%;
@@ -532,14 +612,42 @@ height: auto;
 
 .aboutanalyse img {
   margin-top: 0;
+  margin-left: 10%;
   max-width: 50%;
-  max-height: auto;
+  height: auto;
+}
+
+/*Om mig side*/
+.ommig {
+margin: 5%;
 }
 
 
+.aboutchanne {
+ display: flex;
+ flex-direction: row;
+}
+
+.aboutchanne img {
+  height: 5%;
+  width: auto;
+} 
+
+.aboutchanne p {
+  margin-right: 10%
+}
+
+.aboutarbejde {
+ display: flex;
+ flex-direction: row;
+}
+
+.aboutarbejde p {
+  margin-right: 10%;
+}
 
 
-
+/*Mobil under 800px*/
 @media only screen and (max-width: 800px){
 
 
@@ -769,7 +877,7 @@ height: auto;
   flex-direction: column;
   margin-top: 10%;
   max-width: 40%;
-  max-height: auto;
+  height: auto;
  justify-content: center;
  }
 
@@ -782,8 +890,13 @@ height: auto;
   display: flex;
   flex-direction: column;
   margin-top: 10%;
-  max-width: 40%;
-  max-height: auto;
+  max-width: 200%;
+  height: auto;
  justify-content: center;
  }
+
+ .aboutchanne {
+ display: flex;
+ flex-direction: column;
+}
 }
