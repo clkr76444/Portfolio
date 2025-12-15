@@ -185,6 +185,7 @@ p {
   background-size: cover;
   background-position: center;
   max-height: 400px;
+  width: auto;
 }
 
 .talk-to-us-content h2 {
@@ -199,6 +200,8 @@ p {
   color: #fff1ec;
   margin-top: 16px;
 }
+
+
 
 
 /* Footer */
@@ -460,9 +463,12 @@ form {
   margin-top: -10%;
 }
 
+.aboutcontentcreation h2 {
+  margin-top: 10%;
+}
+
 .aboutcontentcreation p {
   margin-right: 20%;
-  margin-top: 7%;
 }
 
 
@@ -555,9 +561,45 @@ form {
   height: 5%;
   width: auto;
   border-radius: 10px;
+  margin-top: 10%;
 } 
 
 .aboutchanne p {
+  margin-bottom: 2%;
+  margin-right: 10%
+}
+
+.aboutchanne1 {
+ display: flex;
+ flex-direction: row;
+}
+
+.aboutchanne1 img {
+  height: 5%;
+  width: auto;
+  border-radius: 10px;
+  margin-top: -5%;
+} 
+
+.aboutchanne1 p {
+  margin-bottom: 2%;
+  margin-right: 10%
+}
+
+.aboutchanne2 {
+ display: flex;
+ flex-direction: row;
+}
+
+.aboutchanne2 img {
+  height: 5%;
+  width: auto;
+  border-radius: 10px;
+  margin-top: -5%;
+} 
+
+.aboutchanne2 p {
+  margin-bottom: 2%;
   margin-right: 10%
 }
 
