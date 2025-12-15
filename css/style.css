@@ -59,6 +59,11 @@ nav {
     font-size: 24px;
 }
 
+.nav-links a.active {
+    border-bottom: 3px solid #FFF1EC;
+    padding-bottom: 4px;
+}
+
 nav .logo {
     font-family: 'Pompiere', 'Ariel', sans-serif;
     font-size: 30px;
@@ -94,9 +99,9 @@ nav .logo {
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-   margin: auto;
-   margin-top: 5%;
-   display: block;
+    margin: 16px auto 0;
+    display: block;
+    width: fit-content;
 }
 
 .second-btn:hover {
@@ -317,7 +322,7 @@ footer p {
 }
 
 #contact-us p {
-  margin-left: 100px;
+  margin-left: 10%;
 }
 
 /*Kontaktform*/
@@ -787,7 +792,7 @@ form {
 
 .aboutportfolio img {
   max-height: 25%;
-  max-width: auto;
+  max-width: none;
 }
 
 .aboutfotos {
@@ -800,7 +805,7 @@ form {
   flex-direction: column;
   margin-top: 10%;
   max-width: 80%;
-  max-height: auto;
+  max-height: none;
  justify-content: center;
  }
 
@@ -813,7 +818,7 @@ form {
 
 .aboutcontentcreation img {
   max-width: 80%;
-  max-height: auto;
+  max-height: none;
   margin-top: 10%;
   justify-content: center;
 }
@@ -829,7 +834,7 @@ form {
   flex-direction: column;
   margin-top: 10%;
   max-width: 90%;
-  max-height: auto;
+  max-height: none;
 }
 
 .aboutvideo {
@@ -846,7 +851,7 @@ form {
   flex-direction: column;
   margin-top: 10%;
   max-width: 90%;
-  max-height: auto;
+  max-height: none;
 }
 
 .aboutprototyping {
