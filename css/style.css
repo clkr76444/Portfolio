@@ -1,4 +1,3 @@
-/* ========== GLOBAL ========== */
 /* Globale settings */
 
 *{
@@ -14,29 +13,45 @@ html, body {
   overflow-x: hidden;
 }
 
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 999;
-  background-color: #6F3B2F;
-  color: #FFDCCC;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50px;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-#scrollToTopBtn.show {
-  opacity: 1;
-}
 
-
-a {
-  text-decoration: none;
+h1 {
   color: #FFF1EC;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 55px;
+}
+
+h2 {
+  color: #1C2F4C;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 40px;
+}
+
+h3 {
+  color: #1C2F4C;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h4 {
+  color: #1C2F4C;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  
+}
+
+h5 {
+color: #FFF1EC;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 55px;
+}
+
+p {
+  color: #1C2F4C;
+  font-family: 'Pompiere', 'Ariel', sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
 }
 
 .container {
@@ -45,6 +60,7 @@ a {
   padding: 0 8px;
 }
 
+/*Navigationslinje*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -70,7 +86,13 @@ nav .logo {
     color: #FFF1EC;
 }
 
+a {
+  text-decoration: none;
+  color: #FFF1EC;
+}
 
+
+/*Knapper*/
 .primary-btn {
     background-color: #FFDCCC;
     font-family: "Pompiere", 'Ariel', sans-serif;
@@ -115,6 +137,7 @@ nav .logo {
    font-weight: bold;
 }
 
+/*Burger menu media query under 800px*/
 .menu-btn {
     position: absolute;
     right: 50px;
@@ -134,44 +157,25 @@ nav .logo {
     transition: transform 0.3s ease;
 }
 
-h1 {
-  color: #FFF1EC;
-  font-family: 'Pompiere', 'Ariel', sans-serif;
-  font-size: 55px;
+/*Til JavaScript scrolltotopbtn*/
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+  background-color: #6F3B2F;
+  color: #FFDCCC;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-h2 {
-  color: #1C2F4C;
-  font-family: 'Pompiere', 'Ariel', sans-serif;
-  font-size: 40px;
-}
-
-h3 {
-  color: #1C2F4C;
-  font-family: 'Pompiere', 'Ariel', sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-h4 {
-  color: #1C2F4C;
-  font-family: 'Pompiere', 'Ariel', sans-serif;
-  font-size: 16px;
-  font-weight: lighter;
-  
-}
-
-h5 {
-color: #FFF1EC;
-  font-family: 'Pompiere', 'Ariel', sans-serif;
-  font-size: 55px;
-}
-
-p {
-  color: #1C2F4C;
-  font-family: 'Pompiere', 'Ariel', sans-serif;
-  font-size: 24px;
-  line-height: 1.6;
+#scrollToTopBtn.show {
+  opacity: 1;
 }
 
 /*Skal vi samarbejde?- sektion*/
@@ -208,7 +212,6 @@ p {
 
 
 
-
 /* Footer */
 
 footer {
@@ -227,7 +230,7 @@ footer p {
 }
 
 
-/* ========== INDEX (Forside) ========== */
+/* Forside */
 
 #portfolio-header {
   width: 100%;
@@ -295,7 +298,7 @@ footer p {
 .header-text h2 span {
     display: block;
 }
-
+/*Bilag 1 slut*/
 
 
 /*Kontaktside*/
@@ -346,7 +349,7 @@ form {
   font-size: 20px;
 }
 
-/*Mine oplysninger*/
+/*Kontaktform -> Mine oplysninger*/
 
 .adresses {
   flex-basis: 50%;
@@ -368,7 +371,7 @@ form {
 }
 
 
-/*Sociale medier*/
+/*Kontaktform -> Sociale medier*/
 .followWrapper {
   margin-top: 50px;
   margin-left: 0px;
@@ -396,7 +399,7 @@ form {
 
 
 
-/* ========== PORTFOLIO ========== */
+/* Portfolio */
 #portfolio-header {
   min-height: 300px;
   background-image: url(../img/baggrund.webp);
@@ -404,10 +407,10 @@ form {
   background-position: center;
 }
 
+/*Margin på hele siden*/
 .portfolio {
   margin: 7%;
 }
-
 
 
 .solid-divider {
@@ -449,9 +452,7 @@ form {
   border-radius: 10px;
 }
 
-.aboutfotos.primary-btn {
-  justify-items: center;
-}
+
 
 
 /*Sektion 3*/
@@ -545,7 +546,7 @@ form {
   border-radius: 10px;
 }
 
-/* ========== OMMIG (Om mig) ========== */
+/* Om mig */
 
 #ommig {
   margin-top: 5%;
@@ -556,7 +557,7 @@ form {
   margin-bottom: 2%;
 }
 
-
+/*Sektion 1*/
 .aboutchanne {
  display: flex;
  flex-direction: row;
@@ -574,6 +575,7 @@ form {
   margin-right: 10%
 }
 
+/*Sektion 2*/
 .aboutchanne1 {
  display: flex;
  flex-direction: row;
@@ -591,6 +593,7 @@ form {
   margin-right: 10%
 }
 
+/*Sektion 3*/
 .aboutchanne2 {
  display: flex;
  flex-direction: row;
@@ -633,10 +636,10 @@ form {
 }
 
 
-/* ========== MEDIA QUERIES ========== */
+/* Media queries */
 @media only screen and (max-width: 800px){
 
-  /* --- INDEX / Forside --- */
+  /* Forside */
 
   #portfolio-header {
     min-height: 500px;
@@ -673,9 +676,9 @@ form {
       align-items: center;
     }
 
+  /*Burger menu*/
   .menu-btn {
     display: block;
-
   }
 
   nav {
@@ -709,7 +712,6 @@ form {
   }
 
 
-
   footer {
     flex-direction: column;
     text-align: center;
@@ -717,9 +719,7 @@ form {
     gap: 16px;}
 
 
-
-
-/*kontakt side*/
+/*Kontakt side media queries*/
 
   #contact-us {
     flex-direction: column;
@@ -782,7 +782,7 @@ form {
   margin-top: 5%;
  }
 
-  /* --- PORTFOLIO --- */
+  /* Portfolio media queries*/
 
   .aboutportfolio {
   display: flex;
