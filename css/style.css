@@ -499,47 +499,6 @@ height: auto;
   justify-items: center;
 }
 
-/*BILAG 2*/
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 800px;   /* begrænser bredden på store skærme */
-  margin: auto;
-  margin-right: 4%;
-}
-
-.carousel-window {
-  overflow: hidden;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.4s ease;
-}
-
-.carousel-track img {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-
-/* Image karussel */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/*BILAG 2 SLUT*/
 
 /*Sektion 3*/
 .aboutcontentcreation {
@@ -622,6 +581,9 @@ height: auto;
 margin: 5%;
 }
 
+.ommig h2 {
+  margin-bottom: 2%;
+}
 
 .aboutchanne {
  display: flex;
@@ -729,7 +691,6 @@ margin: 5%;
   }
 
 
-
   footer {
     flex-direction: column;
     text-align: center;
@@ -827,6 +788,7 @@ margin: 5%;
   max-height: auto;
  justify-content: center;
  }
+
 
 .aboutcontentcreation {
   display: flex;

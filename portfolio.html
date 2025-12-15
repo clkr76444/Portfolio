@@ -57,73 +57,34 @@
     <hr class="solid-divider">
 </section>
 
-
-<section class="portfolio" class="container">
-    <h2>Fotos</h2>
+    <section class="portfolio" class="container">
+    <h2>Produktfotografering</h2>
     <div class="aboutfotos">
         <p>
-            Jeg elsker at tage billeder af mad. I galleriet kan du se et par af mine fotografier, som jeg har taget her i december måned. 
-            Ønsker du at få taget billeder til dit nye menukort eller af din nye menu? Så kan du kontakte mig ved at trykke på knappen her!
-           <br> <button class="primary-btn">Kontakt mig</button>
+        Jeg elsker at tage billeder.
+        <br>Og jeg elsker mad.
+        <br>Og når jeg kombinere de to, kan jeg vise råvarer frem fra deres bedste side!
+        <br>
+        Når jeg arbejder med produktfotografering, handler det ikke kun om at fange selve produktet.
+        <br>Det handler om at skabe en stemning, der fremhæver dets karakter.
+        <br>Jeg leger med lys, vinkler og baggrunde, så produktet får den plads, det fortjener.
+        <br>Jeg har altid produktet i fokus.
+        <br>Men jeg tænker også på baggrunden - den skal understøtte, ikke forstyrre.
+        <br>En enkel baggrund kan give ro, mens en mere levende kan fortælle en historie.
+        <br>Det er balancen mellem de to, der gør billedet stærkt.
+        <br>Jeg forsøger at fange det øjeblik, hvor produktet står stærkest.
+        <br>Hvor farverne spiller sammen, og hvor lyset rammer helt rigtigt.
+        <br>For mig er produktfotografering ikke bare dokumentation - det er en visuel fortælling.
+        <br>En fortælling, der gør produktet levende og indbydende.
+
         </p>
-
-        <!--BILAG 2-->
-        <div class="carousel">
-        <button class="carousel-btn prev">❮</button>
-
-     <div class="carousel-window">
-         <div class="carousel-track">
-         <img src="../img/bord14.jpg" alt="">
-         <img src="../img/bullabaise.jpg" alt="">
-         <img src="../img/tatar.jpg" alt="">
-         <img src="../img/frikadeller.jpg" alt="">
-         <img src="../img/klejner.jpg" alt="">
-         <img src="../img/greens.jpg" alt="">
-         <img src="../img/bord18.jpg" alt="">
-         <img src="../img/tatar.jpg" alt="">
-         <img src="../img/bord16.jpg" alt="">
-         <img src="../img/vino.jpg" alt="">
-        </div>
-     </div>
-     <button class="carousel-btn next">❯</button>
+        <img src="../img/collagew.webp" alt="Content Creation remake">
     </div>
+    </section>
 
-        <script>
-            const track = document.querySelector('.carousel-track');
-            const images = document.querySelectorAll('.carousel-track img');
-            const prevBtn = document.querySelector('.prev');
-            const nextBtn = document.querySelector('.next');
 
-            let index = 0;
-            const totalImages = images.length;
-            const imagesPerPage = 2;  // Viser 2 billeder ad gangen
 
-            // Funktion til at opdatere carousellen
-            function updateCarousel() {
-            const width = document.querySelector('.carousel-window').clientWidth;
-            track.style.transform = `translateX(-${index * (width / imagesPerPage)}px)`;  // Skift 2 billeder ad gangen
-            }
 
-            // Next knap funktion
-            nextBtn.addEventListener('click', () => {
-            // Hvis vi er på den sidste side, så gå tilbage til den første
-             index = (index + 1) % Math.ceil(totalImages / imagesPerPage);  // Beregn antallet af sider
-             updateCarousel();
-            });
-
-            // Prev knap funktion
-            prevBtn.addEventListener('click', () => {
-            // Hvis vi er på den første side, så gå til den sidste
-            index = (index - 1 + Math.ceil(totalImages / imagesPerPage)) % Math.ceil(totalImages / imagesPerPage);  // Beregn antallet af sider
-            updateCarousel();
-            });
-
-         // Opdater carousellen, hvis vinduet ændres
-         window.addEventListener('resize', updateCarousel);
-        </script>
-        <!--BILAG 2 SLUT -->
-    </div>
- </section>
 
     <section>
     <hr class="solid-divider">
@@ -151,10 +112,14 @@
     <h2>Animation</h2>
     <div class="aboutanimation">
         <p>
-            Dette projekt er mit bud på vores "MovingArts" workshop. Jeg har brugt photoshop og Adobe Premiere Pro. Jeg har valgt at bruge dette projekt fordi jeg synes det afspejler at jeg hellere vil udfordre mig selv end at lave noget indenfor min komfortzone.
-            <br>"Go big or go home"
-            <br>
-            Jeg arbejdede både med lyd, flere billedelag, puppet tool og effekter som Opacity, Scale, Position og Rotation.
+            At udfordre mig selv er en del af min proces.
+            <br>Derfor valgte jeg MovingArts-projektet som et eksperiment, hvor jeg udfordrede mig selv første gang jeg arbejdede med AfterEffects.
+            <br>Nogle projekter handler om at lære.
+            <br>Andre handler om at turde.
+            <br>MovingArts blev mit bud på begge dele.
+            <br>Jeg arbejdede med lyd, flere billedlag og puppet tool.
+            <br>Jeg eksperimenterede med effekter som Opacity, Scale, Position og Rotation.
+
         </p>
         <!--https://www.w3schools.com/html/html_youtube.asp-->
             <iframe width="560" height="315" src="https://www.youtube.com/embed/YP7qjB-4bGE?si=azZSiV1osz3WOIxl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -169,9 +134,11 @@
     <h2>Video og redigering</h2>
     <div class="aboutvideo">
         <p>
-            Dette projekt er klippet sammen i Adobe Premiere Pro. 
-            Jeg har haft fokus på timing, effekter og lyd samt arbejdet en del med keyframes. 
-            <br> Mit fokus har været at skabe en "short video", som kan vise et teaser af mit arbejde.
+            Dette projekt er klippet sammen i Adobe Premiere Pro.
+            <br>Mit mål var at skabe en kort teaser, der kunne vise essensen af mit arbejde - en video, der fanger opmærksomheden hurtigt og effektivt.
+            <br>Jeg har haft fokus på timing, effekter og lyd.
+            <br>Hvert klip skulle falde præcist, hver overgang skulle understøtte rytmen, og lyden skulle binde det hele sammen.
+            <br>Keyframes blev et vigtigt værktøj - de gav mig kontrol over bevægelse, tempo og stemning.
         </p>
                  <!--https://www.w3schools.com/html/html5_video.asp-->
                  <video width="250" height="auto" controls>
@@ -188,9 +155,13 @@
     <h2>Prototyping</h2>
     <div class="aboutprototyping">
         <p>
-            Til dette projekt har jeg primært lavet en prototype i Figma. Vi fik til arbejde at løse et vagtplanlægningssystem for Word Festival.
-            Her arbejdede jeg ud fra en givet styletile fra virksomheden, hvor vi løste deres primære problemstillinger: Indtjekning, vagtønsker og forbedret kommunikation med virksomhedens frivillige. 
-            <br>Det eneste som jeg ikke lavede i prototyping var en fejlside, når man står på forsiden og trykker på <br>"Brug for hjælp?"
+        Til dette projekt arbejdede jeg primært i Figma, hvor jeg udviklede en prototype til et vagtplanlægningssystem for Word Festival. Opgaven bestod i at skabe en løsning, der kunne gøre planlægningen mere overskuelig og kommunikationen med de frivillige mere effektiv.
+        <br>Jeg tog udgangspunkt i en styletile fra virksomheden, så designet fulgte deres visuelle identitet. Med prototypen adresserede vi tre centrale problemstillinger:
+        <br>- Indtjekning - en enkel og brugervenlig proces for frivillige.
+        <br>- Vagtønsker - mulighed for at angive præferencer og skabe bedre overblik.
+        <br>- Kommunikation - forbedret kontakt mellem virksomhed og frivillige.<br>
+        <br> Det eneste i denne prototype jeg ikke lavede, var en fejlside når man trykker på "Brug for hjælp?" på forsiden.
+
 
         </p>
         <img src="../img/wordfestival.webp" alt="Word festival prototype">
@@ -205,22 +176,19 @@
     <h2>Målgruppeanalyse</h2>
     <div class="aboutanalyse">
         <p>
-            I forbindelse med at skulle skabe designbyck.dk, har jeg fået til opgave at vælge en målgruppe. 
-            Jeg valgte at sætte mit fokus på restaurationsbranchen, fordi jeg ønsker at hjælpe restauranter med at vise sig fra deres bedste side og tiltrække potentielle nye gæster.
-            En af de måder, som jeg har valgt at gøre det på, er ved at lave en målgruppe analyse, som det første i mit projekt. 
-            Her snakkede jeg med 5 personer, som arbejder i restaurationsbranchen, hvor jeg interviewede dem for at skabe indblik i hvordan jeg kunne målrette min portfolio bedst muligt til dem.
-            <br>Ud fra dette data, har jeg udarbejdet en persona, som har til formål at opsætte problemstillinger, motivationer og forhindringer, som jeg skal være opmærksom på i forbindelse med mit projekt.
-            Dette gør at jeg har arbejdet målrettet med mit projekt for at ramme en målgruppe.
+            I arbejdet med at skabe designbyck.dk valgte jeg restaurationsbranchen som min primære målgruppe. 
+            <br>Mit fokus var at hjælpe restauranter med at vise sig fra deres bedste side og tiltrække nye gæster gennem et stærkt visuelt udtryk.
+            <br>Som det første trin i projektet lavede jeg en målgruppeanalyse. 
+            <br>Jeg interviewede fem personer, der arbejder i restaurationsbranchen, for at få indblik i deres behov, udfordringer og ønsker. 
+            <br>Denne proces gav mig værdifuld data, som jeg kunne bruge til at målrette min portfolio mere præcist mod branchen.
+            <br>På baggrund af interviewene udarbejdede jeg en persona.    
+            <br>Personaen fungerer som et værktøj til at identificere centrale problemstillinger, motivationer og forhindringer, som restauranter møder i deres daglige arbejde.
+
         </p>
         <img src="../img/persona.webp" alt="Persona lavet af Søren - restaurations ejer">
     </div>
     </section>
 
-    
-
-    <section>
-    <hr class="solid-divider">
-    </section>
     
     <section id="talk-to-us">
         <div class="talk-to-us-content">
