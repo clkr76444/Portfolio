@@ -1,4 +1,5 @@
-/*Globale settings*/
+/* ========== GLOBAL ========== */
+/* Globale settings */
 
 *{
     margin: 0;
@@ -51,7 +52,7 @@ nav {
   padding: 32px;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 32px;
@@ -93,7 +94,9 @@ nav .logo {
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  margin: 0;
+   margin: auto;
+   margin-top: 5%;
+   display: block;
 }
 
 .second-btn:hover {
@@ -216,7 +219,7 @@ footer p {
 }
 
 
-/*INDEX-side*/
+/* ========== INDEX (Forside) ========== */
 
 #portfolio-header {
   width: 100%;
@@ -286,63 +289,6 @@ footer p {
 }
 
 
-.about-section {
-  display: flex;              /* gør sektionen til en flex container */
-  align-items: center;        /* centrerer indholdet vertikalt */
-  justify-content: space-between; /* sørger for at tekst og billede står i hver sin side */
-  gap: 40px;                  /* afstand mellem tekst og billede */
-  margin-top: 60px;
-  text-align: left;
-  flex-wrap: wrap;
-}
-
-.about-content h2 {
-  font-size: 32px;
-  color: #1C2F4C;
-  margin-bottom: 5%;
-}
-
-.about-content {
-  margin-top: 5%;
-  flex: 1;                    /* teksten fylder venstre side */
-  text-align: left;           /* venstrejusteret tekst */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;    /* centrerer indholdet vertikalt i kolonnen */
-}
-
-.about-content .second-btn {
-  display: block;
-  margin: 16px auto 0; /* centrerer knappen horisontalt */
-  width: fit-content;
-}
-
-
-.about-section img {
-  max-width: 400px;   /* sætter en maksimal bredde */
-  width: 100%;        /* tilpasser sig containeren */
-  height: auto;       /* bevarer proportioner */
-  display: block;
-}
-
-
-.about-text {
-  display: flex;
-  flex-direction: column; /* lægger h2, p og knap under hinanden */
-  text-align: left;       /* h2 og p forbliver venstrejusteret */
-  gap: 16px;
-}
-
-.about-section p {
-  margin-bottom: 16px;
-}
-
-.about-text .second-btn {
-  align-self: center;     /* kun knappen centreret horisontalt */
-}
-
-
-
 
 /*Kontaktside*/
 #contact-header {
@@ -396,7 +342,6 @@ form {
 
 .adresses {
   flex-basis: 50%;
-  margin-left: 10px;
 }
 
 .detailsWrapper {
@@ -410,14 +355,14 @@ form {
 
 .detail {
   display: flex;
-  gap: 10px;
+  gap: 0px;
   margin-left: 0px;
 }
 
 
 /*Sociale medier*/
 .followWrapper {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-left: 0px;
 }
 
@@ -443,7 +388,7 @@ form {
 
 
 
-/*Portfolio*/
+/* ========== PORTFOLIO ========== */
 #portfolio-header {
   min-height: 300px;
   background-image: url(../img/baggrund.webp);
@@ -452,13 +397,10 @@ form {
 }
 
 .portfolio {
-  margin: 5%
+  margin: 7%;
 }
 
-.header-content-portfolio img {
-width: 200px;
-height: auto;
-}
+
 
 .solid-divider {
   border-top: 2px solid #6F3B2F;
@@ -473,10 +415,13 @@ height: auto;
   padding-top: 2%;
 }
 
+.aboutportfolio p {
+  margin-right: 5%;
+}
+
 .aboutportfolio img {
-  max-height: 50%;
-  max-width: auto;
-  margin-right: 2%;
+  height: auto;
+  max-width: 80%;
 }
 
 /*Sektion 2*/
@@ -490,9 +435,10 @@ height: auto;
 }
 
 .aboutfotos img {
-  margin-top: 0;
-  max-width: 50%;
-  max-height: auto;
+  margin-top: -5%;
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .aboutfotos.primary-btn {
@@ -508,10 +454,15 @@ height: auto;
 }
 
 .aboutcontentcreation img {
-  max-width: 40%;
-  max-height: auto;
-  margin-left: 10%;
-  margin-right: 4%;
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: -10%;
+}
+
+.aboutcontentcreation p {
+  margin-right: 20%;
+  margin-top: 7%;
 }
 
 
@@ -524,6 +475,7 @@ height: auto;
 .aboutanimation iframe {
   margin-left: 10%;
   margin-right: 4%;
+  border-radius: 10px;
 }
 
 .aboutanimation p {
@@ -539,6 +491,8 @@ height: auto;
 .aboutvideo video {
   margin-left: 10%;
   margin-right: 4%;
+  border-radius: 10px;
+  margin-top: -5%;
 }
 
 .aboutvideo p {
@@ -553,10 +507,10 @@ height: auto;
 }
 
 .aboutprototyping img {
-  margin-left: 10%;
   margin-right: 4%;
-  max-width: 20%;
-  max-height: auto;
+  max-width: 25%;
+  height: auto;
+  margin-top: -5%;
 }
 
 .aboutprototyping p {
@@ -569,21 +523,28 @@ height: auto;
   margin-top: 2%;
 }
 
+.aboutanalyse p {
+  margin-right: 10%;
+}
+
 .aboutanalyse img {
-  margin-top: 0;
-  margin-left: 10%;
-  max-width: 50%;
+  margin-top: -5%;
+  max-width: 30%;
   height: auto;
+  border-radius: 10px;
 }
 
-/*Om mig side*/
-.ommig {
-margin: 5%;
+/* ========== OMMIG (Om mig) ========== */
+
+#ommig {
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
-.ommig h2 {
+#ommig h2 {
   margin-bottom: 2%;
 }
+
 
 .aboutchanne {
  display: flex;
@@ -593,6 +554,7 @@ margin: 5%;
 .aboutchanne img {
   height: 5%;
   width: auto;
+  border-radius: 10px;
 } 
 
 .aboutchanne p {
@@ -608,10 +570,26 @@ margin: 5%;
   margin-right: 10%;
 }
 
+.aboutarbejde img {
+  border-radius: 10px;
+  height: 60%;
+  width: auto;
+}
 
-/*Mobil under 800px*/
+.aboutme {
+  margin: 7%;
+}
+
+.aboutme p {
+  margin-top: 2%;
+  margin-right: 15%;
+}
+
+
+/* ========== MEDIA QUERIES ========== */
 @media only screen and (max-width: 800px){
 
+  /* --- INDEX / Forside --- */
 
   #portfolio-header {
     min-height: 500px;
@@ -635,6 +613,18 @@ margin: 5%;
       max-width: 300px;
   }
   
+  .aboutarbejde img {
+      margin-left: 0;
+      margin-top: 10%;
+      max-width: 80%;
+      height: auto;
+      display: block;
+    }
+
+    .aboutarbejde {
+      flex-direction: column;
+      align-items: center;
+    }
 
   .menu-btn {
     display: block;
@@ -645,7 +635,7 @@ margin: 5%;
     padding: 16px;
   }
 
-  nav ul {
+  .nav-links {
   position: absolute;
   top: 0;
   right: 0;
@@ -659,36 +649,18 @@ margin: 5%;
   
 
   }
-  nav ul.nav-active {
+  .nav-links.nav-active {
     margin-right: 0;
     transition: all 0.3s ease-in-out;
   }
 
-  nav li {
+  .nav-links li {
     border-bottom: 1px solid #FFF1EC;
     width: 100%;
     padding: 8px 20px;
     text-align: left;
   }
 
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 32px 0;
-    gap: 16px;
-  }
-
-  .about-section img {
-    margin: 20px;
-  }
-
-  .about-section h2 {
-    text-align: center;
-  }
-
-  .about-section p {
-      text-align: center;
-  }
 
 
   footer {
@@ -758,13 +730,14 @@ margin: 5%;
  .primary-btn, .second-btn {
   padding: 12px 24px;
   font-size: 18px;
-  width: 50%;
-  margin: 0 auto;
+  width: 25%;
+  margin: auto;
+  margin-top: 5%;
  }
 
-/*portfolio*/
+  /* --- PORTFOLIO --- */
 
-.aboutportfolio {
+  .aboutportfolio {
   display: flex;
   flex-direction: column;
   padding-top: 2%;
@@ -784,7 +757,7 @@ margin: 5%;
   display: flex;
   flex-direction: column;
   margin-top: 10%;
-  max-width: 40%;
+  max-width: 80%;
   max-height: auto;
  justify-content: center;
  }
@@ -799,9 +772,10 @@ margin: 5%;
 .aboutcontentcreation img {
   max-width: 80%;
   max-height: auto;
-  margin-left: 10%;
   margin-top: 10%;
+  justify-content: center;
 }
+
 
 .aboutanimation {
   display: flex;
@@ -819,6 +793,10 @@ margin: 5%;
 .aboutvideo {
   display: flex;
   flex-direction: column;
+}
+
+.aboutvideo p {
+  margin-bottom: 10%;
 }
 .aboutvideo iframe {
   margin-left: 10%;
@@ -840,7 +818,7 @@ margin: 5%;
   margin-top: 10%;
   max-width: 40%;
   height: auto;
- justify-content: center;
+  justify-content: center;
  }
 
  .aboutanalyse {
@@ -856,9 +834,21 @@ margin: 5%;
   height: auto;
  justify-content: center;
  }
+  /* --- OMMIG / Om mig --- */
 
- .aboutchanne {
+  .aboutchanne {
  display: flex;
  flex-direction: column;
 }
+
+.aboutchanne img {
+  width: auto;
+  height: 20%;
+  margin-top: 10%;
+}
+
+.aboutme {
+  margin-top: 10%;
+}
+
 }
