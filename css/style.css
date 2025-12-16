@@ -141,7 +141,7 @@ a {
 
 /*Burger menu media query under 800px*/
 .menu-btn {
-    position: absolute;
+    position: fixed;
     right: 50px;
     top: 30px;
     padding: 12px 12px;
@@ -149,13 +149,24 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFF1EC;
+    background-color: #EEDAD7;
     color: #1C2F4C;
     display: none;
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn.open {
+    background-color: #EEDAD7;
+    color: #1C2F4C;
+}
+
+.menu-btn i {
+    font-size: 20px;
 }
 
 .menu-btn.open i {
-    transform: rotate(90deg);
     transition: transform 0.3s ease;
 }
 
@@ -165,11 +176,11 @@ a {
   bottom: 40px;
   right: 40px;
   z-index: 999;
-  background-color: #6F3B2F;
-  color: #FFDCCC;
+  background-color: #EEDAD7;
+  color: #1C2F4C;
   border: none;
-  padding: 12px 16px;
-  border-radius: 50px;
+  padding: 12px 12px;
+  border-radius: 4px;
   font-size: 20px;
   cursor: pointer;
   opacity: 0;
@@ -490,6 +501,9 @@ form {
   margin-left: 10%;
   margin-right: 4%;
   border-radius: 10px;
+  width: 400px;
+  height: 225px;
+  aspect-ratio: 16 / 9;
 }
 
 .aboutanimation p {
@@ -591,7 +605,7 @@ form {
 } 
 
 .aboutchanne1 p {
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   margin-right: 10%
 }
 
@@ -609,7 +623,7 @@ form {
 } 
 
 .aboutchanne2 p {
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   margin-right: 10%
 }
 
@@ -638,7 +652,313 @@ form {
 }
 
 
-/* Media queries */
+/* Media queries 801px til 1199px */
+@media only screen and (min-width: 801px) and (max-width: 1199px) {
+  
+  .container {
+    max-width: 900px;
+  }
+
+  /* Forside */
+  #portfolio-header {
+    min-height: 600px;
+    max-height: 900px;
+  }
+
+  .header-text h2 {
+    font-size: 250%;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 120%;
+    text-align: center;
+  }
+
+  nav .logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .header-content {
+    font-size: 24px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-image img {
+    max-width: 350px;
+  }
+
+  .aboutarbejde img {
+    margin-left: 0;
+    margin-top: 10%;
+    max-width: 60%;
+    height: auto;
+    display: block;
+  }
+
+  .aboutarbejde {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Burger menu */
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    padding: 16px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #1C2F4C;
+    width: 100%;
+    height: 100vh;
+    align-items: end;
+    padding-top: 80px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-links.nav-active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #FFF1EC;
+    width: 100%;
+    padding: 8px 20px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 0;
+    gap: 16px;
+  }
+
+  /* Kontakt side */
+  #contact-us {
+    flex-direction: column;
+  }
+
+  .inputsWrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60%;
+    gap: 15px;
+  }
+
+  #contact-us h3 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  #contact-us p {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .adresses {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .detailsWrapper {
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .followWrapper img {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .followWrapper {
+    text-align: center;
+  }
+
+  .sociallink {
+    justify-content: center;
+  }
+
+  .detail {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .primary-btn, .second-btn {
+    padding: 14px 28px;
+    font-size: 20px;
+    width: 40%;
+    margin: auto;
+    margin-top: 1%;
+    text-align: center;
+  }
+
+  /* Portfolio */
+  .aboutportfolio {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+  }
+
+  .aboutportfolio img {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .aboutfotos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutfotos img {
+    margin: 10% auto 0;
+    display: block;
+    max-width: 50%;
+    max-height: none;
+  }
+
+  .aboutcontentcreation {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    align-items: center;
+  }
+
+  .aboutcontentcreation img {
+    max-width: 35%;
+    max-height: none;
+    margin: 10% auto 0;
+  }
+
+  .aboutanimation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutanimation iframe {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    max-width: 60%;
+    max-height: none;
+  }
+
+  .aboutvideo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutvideo p {
+    margin-bottom: 10%;
+  }
+
+  .aboutvideo video {
+    margin: 10% auto 0;
+    max-width: 60%;
+    max-height: none;
+  }
+
+  .aboutprototyping {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutprototyping img {
+    margin: 10% auto 0;
+    display: block;
+    max-width: 45%;
+    height: auto;
+  }
+
+  .aboutanalyse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutanalyse img {
+    margin: 10% auto 0;
+    display: block;
+    max-width: 70%;
+    height: auto;
+  }
+
+  /* Om mig */
+  .aboutchanne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutchanne img {
+    width: 50%;
+    height: auto;
+    margin-top: 10%;
+  }
+
+  .aboutchanne1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutchanne1 p {
+    margin-bottom: 10%;
+  }
+
+  .aboutchanne1 img {
+    width: 50%;
+    height: auto;
+  }
+
+  .aboutchanne2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutchanne2 p {
+    margin-bottom: 10%;
+  }
+
+  .aboutchanne2 img {
+    width: 60%;
+    height: auto;
+  }
+
+  .aboutme {
+    margin-top: 10%;
+  }
+
+}
+
+/* Mobil - under 800px */
 @media only screen and (max-width: 800px){
 
   /* Forside */
@@ -654,6 +974,25 @@ form {
 
   }
 
+   h5 {
+    font-size: 100%;
+    text-align: center;
+   }
+
+   nav .logo {
+    text-align: center;
+    width: 100%;
+    margin-top:5%;
+   }
+
+   h2 {
+    text-align: center;
+    margin-bottom: 5%;
+   }
+
+   .hide-mobile {
+    display: none;
+   }
 
     .header-content {
       font-size: 20px;
@@ -688,28 +1027,28 @@ form {
   }
 
   .nav-links {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   flex-direction: column;
   background-color: #1C2F4C;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   align-items: end;
   padding-top: 80px;
-  margin-right: -900px;
-  
-
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
   }
   .nav-links.nav-active {
-    margin-right: 0;
-    transition: all 0.3s ease-in-out;
+    transform: translateX(0);
   }
 
   .nav-links li {
     border-bottom: 1px solid #FFF1EC;
     width: 100%;
     padding: 8px 20px;
+    padding-bottom: 10px;
     text-align: left;
   }
 
@@ -779,9 +1118,10 @@ form {
  .primary-btn, .second-btn {
   padding: 12px 24px;
   font-size: 18px;
-  width: 25%;
+  width: 50%;
   margin: auto;
   margin-top: 5%;
+  text-align: center;;
  }
 
   /* Portfolio media queries*/
@@ -793,8 +1133,10 @@ form {
 }
 
 .aboutportfolio img {
-  max-height: 25%;
-  max-width: none;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 .aboutfotos {
@@ -816,13 +1158,15 @@ form {
   display: flex;
   flex-direction: column;
   padding-top: 2%;
+  align-items: center;
 }
 
 .aboutcontentcreation img {
   max-width: 80%;
   max-height: none;
   margin-top: 10%;
-  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 
@@ -865,7 +1209,7 @@ form {
   display: flex;
   flex-direction: column;
   margin-top: 10%;
-  max-width: 40%;
+  max-width: 90%;
   height: auto;
   justify-content: center;
  }
@@ -888,12 +1232,33 @@ form {
   .aboutchanne {
  display: flex;
  flex-direction: column;
+ align-items: center;
 }
 
 .aboutchanne img {
-  width: auto;
-  height: 20%;
+  width: 80%;
+  height: auto;
   margin-top: 10%;
+}
+
+.aboutchanne1 {
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutchanne1 img {
+  width: 80%;
+  height: auto;
+}
+
+.aboutchanne2 {
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutchanne2 img {
+  width: 90%;
+  height: auto;
 }
 
 .aboutme {
