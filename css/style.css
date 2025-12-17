@@ -61,8 +61,9 @@ h6 {
 p {
   color: #1C2F4C;
   font-family: 'Manrope', 'Arial', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.8;
+  margin-top: 1%;
 }
 
 /* Centreret tekst margin */
@@ -113,7 +114,7 @@ nav .logo {
     font-family: 'Pompiere', 'Ariel', sans-serif;
     font-size: 30px;
     color: #FFF1EC;
-    margin-left: -3%;
+    margin-left: -7%;
 }
 
 a {
@@ -310,12 +311,12 @@ footer p {
   text-align: left;
   font-size: 48px;
   line-height: 1.2;
+  margin-left: -5%;
 }
 
 
 .header-image img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 350px;
   height: auto;
   border-radius: 10px;
 }
@@ -325,6 +326,7 @@ footer p {
   width: fit-content;
   align-self: flex-start;
   margin: 0;
+  margin-left: -5%;
 }
 
 
@@ -357,6 +359,14 @@ footer p {
   background-position: center;
   display: flex;
   align-items: center;
+}
+
+#contact-header nav .logo {
+  margin-left: -18%;
+}
+
+#contact-header nav {
+  margin-right: -18%;
 }
 
 /*Kontaktform -> Mine oplysninger*/
@@ -476,6 +486,7 @@ footer p {
 .aboutportfolio img {
   height: auto;
   max-width: 80%;
+  margin-top: -5%;
 }
 
 /*Sektion 2*/
@@ -490,7 +501,7 @@ footer p {
 
 .aboutfotos img {
   margin-top: -5%;
-  max-width: 75%;
+  max-width: 275px;
   height: auto;
   border-radius: 10px;
 }
@@ -529,7 +540,8 @@ footer p {
 
 .aboutanimation iframe {
   margin-left: 10%;
-  margin-right: 4%;
+  margin-right: 0;
+  margin-top: 4%;
   border-radius: 10px;
   width: 400px;
   height: 225px;
@@ -548,7 +560,7 @@ footer p {
 
 .aboutvideo video {
   margin-left: 10%;
-  margin-right: 4%;
+  margin-right: 0;
   border-radius: 10px;
   margin-top: -5%;
 }
@@ -567,6 +579,7 @@ footer p {
 .aboutprototyping img {
   max-width: 25%;
   height: auto;
+  margin-top: -5%;;
 
 }
 
@@ -588,6 +601,7 @@ footer p {
   max-width: 30%;
   height: auto;
   border-radius: 10px;
+  margin-top: -5%;
 }
 
 /* Om mig */
@@ -605,7 +619,7 @@ footer p {
 }
 
 .aboutchanne img {
-  height: 5%;
+  height: 300px;
   width: auto;
   border-radius: 10px;
   margin-top: 10%;
@@ -623,7 +637,7 @@ footer p {
 }
 
 .aboutchanne1 img {
-  height: 5%;
+  height: 400px;
   width: auto;
   border-radius: 10px;
   margin-top: -5%;
@@ -641,7 +655,7 @@ footer p {
 }
 
 .aboutchanne2 img {
-  height: 5%;
+  height: 240px;
   width: auto;
   border-radius: 10px;
 } 
@@ -662,10 +676,10 @@ footer p {
 
 .aboutarbejde img {
   border-radius: 10px;
-  height: 60%;
-  width: auto;
+  height: 450px;
+  max-width: auto;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 12%;
   display: block;
 }
 
