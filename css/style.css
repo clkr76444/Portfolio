@@ -598,7 +598,7 @@ footer p {
 }
 
 .aboutanalyse img {
-  max-width: 30%;
+  max-width: 80%;
   height: auto;
   border-radius: 10px;
   margin-top: -5%;
@@ -619,7 +619,7 @@ footer p {
 }
 
 .aboutchanne img {
-  height: 300px;
+  height: 500px;
   width: auto;
   border-radius: 10px;
   margin-top: 10%;
@@ -637,10 +637,10 @@ footer p {
 }
 
 .aboutchanne1 img {
-  height: 400px;
+  height: 450px;
   width: auto;
   border-radius: 10px;
-  margin-top: -5%;
+  margin-top: 10%;
 } 
 
 .aboutchanne1 p {
@@ -655,15 +655,17 @@ footer p {
 }
 
 .aboutchanne2 img {
-  height: 240px;
+  height: 260px;
   width: auto;
   border-radius: 10px;
+  margin-top: 5%;
 } 
 
 .aboutchanne2 p {
   margin-bottom: 5%;
   margin-right: 10%;
 }
+
 
 .aboutarbejde {
  display: flex;
